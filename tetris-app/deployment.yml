@@ -22,5 +22,4 @@ spec:
             - containerPort: 80 # Replace with the port your Tetris game listens on
           securityContext:
             privileged: true
-        restartPolicy: OnFailure
       
