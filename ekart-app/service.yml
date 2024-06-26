@@ -7,10 +7,9 @@ metadata: # Metadata of the resource kind we are creating
   name: ekart
   namespace: abastidasc-devops
 spec:
-  selector:
-    app: ekart
   ports:
     - protocol: "TCP"
       port: 8070 # The port that the service is running on in the cluster
       targetPort: 8070 # The port exposed by the service
-  type: ClustertIP # type of the service.
+  selector:
+    app: ekart
