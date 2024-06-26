@@ -17,9 +17,9 @@ spec:
       containers:
         - name: tetris
           image: adijaiswal/tetris:v1 # Replace with the actual image tag
+          command: ["sh", "-c", "chown -R nginx:nginx /var/cache/nginx"]
+          securityContext:
+            privileged: true
           ports:
             - containerPort: 80 # Replace with the port your Tetris game listens on
-      volumeMounts:
-        - name: tetris-config
-          mountPath: /docker-entrypoint.d/
-          readOnly: true
+      
