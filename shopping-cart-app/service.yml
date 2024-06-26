@@ -9,7 +9,8 @@ metadata:
 spec:
   ports:
     - protocol: "TCP"
-      port: 8090
-      targetPort: 8090
+      port: 8070
+      targetPort: 8070
+      type: LoadBalancer # type of the service.
   selector:
     app: shopping-cart
