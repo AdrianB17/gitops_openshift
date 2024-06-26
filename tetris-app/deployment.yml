@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
         - name: tetris
-          image: adijaiswal/tetris:v3
+          image: adijaiswal/tetris:v1
           imagePullPolicy: IfNotPresent
           ports:
