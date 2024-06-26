@@ -22,3 +22,5 @@ spec:
           imagePullPolicy: IfNotPresent
           command: ["/docker-entrypoint.sh"]
           args: ["nginx", "-g", "daemon off;"]
+          ports:
+            - containerPort: 80
