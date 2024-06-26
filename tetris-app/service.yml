@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: tetris
   namespace: abastidasc-devops
+  labels:
+    app: tetris
 spec:
   ports:
     - protocol: TCP
