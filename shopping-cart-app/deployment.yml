@@ -17,6 +17,5 @@ spec:
           image: adijaiswal/shopping-cart:latest
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8090 # The port that the container is running on in the cluster
           
       
