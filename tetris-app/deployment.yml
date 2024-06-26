@@ -17,7 +17,7 @@ spec:
       containers:
         - name: tetris
           image: adijaiswal/tetris:v1 # Replace with the actual image tag
-          command: [nginx -g "daemon off;"]
+          command: nginx -g "daemon off;"
           ports:
             - containerPort: 80 # Replace with the port your Tetris game listens on
       
