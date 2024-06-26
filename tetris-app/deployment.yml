@@ -20,4 +20,4 @@ spec:
           image: adijaiswal/tetris:v1  # Replace with the actual image tag
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8090
+            - containerPort: 80 # Replace with the port your Tetris game listens on0
