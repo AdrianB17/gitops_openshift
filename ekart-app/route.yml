@@ -2,13 +2,13 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   labels:
-    app: ekart
-  name: ekart
+    app: tetris
+  name: tetris
   namespace: abastidasc-devops
 spec:
   port:
     targetPort: 8070
   to:
     kind: Service
-    name: ekart
+    name: tetris
     weight: 100
