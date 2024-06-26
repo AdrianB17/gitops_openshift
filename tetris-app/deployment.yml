@@ -20,5 +20,5 @@ spec:
         - name: tetris
           image: adijaiswal/tetris:v1
           imagePullPolicy: IfNotPresent
-          securityContext:
-            runAsUser: 0
+          command: ["/docker-entrypoint.sh"]
+          args: ["nginx", "-g", "daemon off;"]
