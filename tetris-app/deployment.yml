@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: tetris
-  namespace: abastidas-devops
+  namespace: abastidasc-devops
 spec:
   replicas: 3
   selector:
