@@ -27,6 +27,3 @@ spec:
           securityContext:
             runAsUser: 1000 # Cambiar según sea necesario
             fsGroup: 1000
-          volumeMounts:
-            - name: cache-volume
-              mountPath: /var/cache/nginx
