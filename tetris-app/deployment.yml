@@ -2,6 +2,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  labels:
+    app: tetris
   name: tetris
   namespace: abastidasc-devops
 spec:
@@ -17,4 +19,5 @@ spec:
       containers:
         - name: tetris
           image: adijaiswal/tetris:v3
+          imagePullPolicy: IfNotPresent
           ports:
