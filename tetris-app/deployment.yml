@@ -5,7 +5,7 @@ metadata:
   name: tetris
   namespace: abastidasc-devops
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: tetris
