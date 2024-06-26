@@ -1,15 +1,13 @@
 ---
-apiVersion: v1 
-kind: Service 
-metadata: # Metadata of the resource kind we are creating
-  labels:
-    app: ekart
-  name: ekart
-  namespace: abastidasc-devops
+apiVersion: v1
+kind: Service
+metadata:
+  name: tetris-service
 spec:
-  ports:
-    - protocol: "TCP"
-      port: 8070 # The port that the service is running on in the cluster
-      targetPort: 8070 # The port exposed by the service
   selector:
-    app: ekart
+    app: tetris
+  ports:
+  - protocol: TCP
+    port: 80                
+    targetPort: 3000
+  type: LoadBalancer
