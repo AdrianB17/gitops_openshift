@@ -1,12 +1,11 @@
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    app: tetris
-  name: tetris
+  name: tetris-deployment
   namespace: abastidasc-devops
 spec:
-  replicas: 2
+  replicas: 2 # You can adjust the number of replicas as needed
   selector:
     matchLabels:
       app: tetris
@@ -15,26 +14,10 @@ spec:
       labels:
         app: tetris
     spec:
-      initContainers:
-        - name: init-permissions
-          image: busybox
-          command: ['sh', '-c', 'mkdir -p /var/cache/nginx/client_temp && chown -R 1000:1000 /var/cache/nginx']
-          securityContext:
-            runAsUser: 0
-            runAsGroup: 0
-          volumeMounts:
-            - name: nginx-cache
-              mountPath: /var/cache/nginx
       containers:
         - name: tetris
-          image: adijaiswal/tetris:v1
-          imagePullPolicy: IfNotPresent
-          securityContext:
-            runAsUser: 1000 # Usuario no root
-            runAsGroup: 1000
-          volumeMounts:
-            - name: nginx-cache
-              mountPath: /var/cache/nginx
-      volumes:
-        - name: nginx-cache
-          emptyDir: {}
+          image: adijaiswal/tetris:v1 # Replace with the actual image tag
+          ports:
+            - containerPort: 80 # Replace with the port your Tetris game listens on
+          command: ["/docker-entrypoint.sh"]
+          args: ["nginx", "-g", "daemon off;"]
