@@ -18,3 +18,4 @@ spec:
       - name: tetris
         image: aakibkhan1212/tetrisv1:latest
         ports:
+        - containerPort: 3000
