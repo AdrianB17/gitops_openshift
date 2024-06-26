@@ -20,6 +20,6 @@ spec:
           image: adijaiswal/shopping-cart:latest
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8090
+            - containerPort: 8070
           
       
