@@ -4,6 +4,8 @@ kind: Deployment
 metadata:
   name: tetris
   namespace: abastidasc-devops
+  labels:
+    app: tetris
 spec:
   replicas: 2 # You can adjust the number of replicas as needed
   selector:
