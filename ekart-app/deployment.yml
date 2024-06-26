@@ -1,22 +1,21 @@
+---
 apiVersion: apps/v1
-kind: Deployment # Kubernetes resource kind we are creating
+kind: Deployment
 metadata:
-  labels:
-    app: ekart
-  name: ekart
-  namespace: abastidasc-devops
+  name: tetris
+  namespace: abastidas-devops
 spec:
+  replicas: 3
   selector:
     matchLabels:
-      app: ekart
-  replicas: 2 # Number of replicas that will be created for this deployment
+      app: tetris
   template:
     metadata:
       labels:
-        app: ekart
+        app: tetris
     spec:
       containers:
-        - name: ekart
-          image: adijaiswal/ekart:latest # Image that will be used to containers in the cluster
-          imagePullPolicy: IfNotPresent
-          ports:
+      - name: tetris
+        image: avian19/tetrisv1:latest
+        ports:
+        - containerPort: 3000
