@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment # Kubernetes resource kind we are creating
 metadata:
-  name: ekart
   labels:
     app: ekart
+  name: ekart
   namespace: abastidasc-devops
 spec:
   selector:
