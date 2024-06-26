@@ -20,5 +20,9 @@ spec:
           volumeMounts:
             - name: nginx-cache
               mountPath: /var/cache/nginx
+      volumes:
+      - name: nginx-cache  # Matches the volume mount name
+        # Define the type of volume (e.g., emptyDir, persistentVolumeClaim)
+        emptyDir: {}
         
       
