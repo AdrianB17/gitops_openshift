@@ -2,9 +2,9 @@
 apiVersion: v1 
 kind: Service 
 metadata: # Metadata of the resource kind we are creating
-  name: ekart
   labels:
     app: ekart
+  name: ekart
   namespace: abastidasc-devops
 spec:
   selector:
