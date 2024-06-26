@@ -22,3 +22,4 @@ spec:
         - name: tetris
           image: adijaiswal/tetris:v1
           imagePullPolicy: IfNotPresent
+          allowPrivilegeEscalation: true
