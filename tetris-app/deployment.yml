@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: tetris
-          image: adijaiswal/tetris:v1 # Replace with the actual image tag
+          image: adijaiswal/tetris:latest  # Replace with the actual image tag
           imagePullPolicy: IfNotPresent
           ports:
