@@ -4,10 +4,10 @@ metadata:
   name: tetris
   namespace: abastidasc-devops
 spec:
-  selector:
-    app: tetris
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 8090
+      targetPort: 8090
   type: ClusterIP
+  selector:
+    app: tetris
