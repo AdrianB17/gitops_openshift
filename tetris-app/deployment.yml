@@ -18,6 +18,4 @@ spec:
         - name: tetris
           image: adijaiswal/tetris:v1 # Replace with the actual image tag
           command: ["nginx", "-g", "daemon off;"]
-          securityContext:
-            privileged: true
       
